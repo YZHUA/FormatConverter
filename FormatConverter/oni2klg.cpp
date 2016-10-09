@@ -116,7 +116,7 @@ int rmain(int argc,char **argv)
     streamColor.start();
     streamDepth.start();
     int num_pixs1=640*480*2;int num_pixs2=640*480*3;
-    for (int i = 1;i <= total; ++ i)
+    for (long int i = 1;i <= total; ++ i)
     {  
         fwrite( &i, sizeof( int64_t ), 1, fp );
         fwrite( &num_pixs1, sizeof( int32_t ), 1, fp );
