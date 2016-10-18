@@ -8,11 +8,14 @@
 
 using namespace std;  
   
-int rmain(int argc,char **argv)
+int main(int argc,char **argv)
 {
+    if(argc!=3){
+        printf("error using FormatConverter!!\nexample usage:\noni2klg test.oni test.klg\n");
+        return -1;
+    }
     //定义oni文件中视频的总帧数以及得到的图片的保存目录  
     int total = 0;  
-    char* imagefile = "";
       
     //初始化OpenNI环境  
     openni::OpenNI::initialize();  
